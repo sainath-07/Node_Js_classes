@@ -124,3 +124,15 @@ Node js is single threaded or multithreaded?
 node js is single threaded
 node js can run at a time only one command.
 
+nodemoudles or package should not be pushed into the git hub because it takes huges space to stores
+ 
+to skip the pushing of the nodemoudles or package to git hub create .gitignore file and mention file followed by forward slash
+
+
+Nodemon libary :
+
+
+Nodemon is npm module or package it will automatically restart the node if there are any changes in the source code, it saves Time of developer and it doesn't effect the orignal code.
+
+Nodejs is async, so that is the reason it works very fast.
+
