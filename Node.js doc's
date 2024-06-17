@@ -136,3 +136,60 @@ Nodemon is npm module or package it will automatically restart the node if there
 
 Nodejs is async, so that is the reason it works very fast.
 
+
+
+----------
+
+Day -05
+
+creating the API by using the http module and createserver function method , this create server method will accept call back function here 1st parameter is request and 2nd parameter is response 
+
+To create the API we need to use te response parameter 
+1. resp.writeHead method 
+
+The first argument of the res.writeHead() method is the status code, 200 means that all is OK, the second argument is an object containing the response headers.
+
+
+2. resp.write("we need to pass the json data here by converting into json string use JSON.stringify()")
+
+
+3. resp.end() 
+
+end() will send the signal to server that all the header has been sent.
+
+
+4. we need to use the listen method as a .listen() after the createserver() method 
+
+inside the listen method we need to mention the any port number,
+
+
+--------
+
+Day-06
+
+Taking the input from cmd line 
+
+we need to use the process object and argv (argumentvector)
+to collect input from the cmd line
+
+and creating the file by importing the fs module
+
+
+----------
+
+Day-07
+
+
+creating the fs moudles inside the new floder
+here to create the file in the specific directory we need to import the path 
+
+use the __dirname which will represent the current directory
+with the path use the join method and include the __dirname as 1st arg, 2nd arg as the floder name where you want to create the file
+
+
+created a multiple with loops 
+
+
+to read the created files we need to use the readdir method because we have created the files in a another directory
+
+The fs.readdir() function in Node.js is used to read the contents of a directory. It returns an array of the names of the files and subdirectories in the directory.
