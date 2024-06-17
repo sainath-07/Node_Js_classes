@@ -193,3 +193,28 @@ created a multiple with loops
 to read the created files we need to use the readdir method because we have created the files in a another directory
 
 The fs.readdir() function in Node.js is used to read the contents of a directory. It returns an array of the names of the files and subdirectories in the directory.
+
+
+----
+
+Day-08
+
+crud operations with file system
+
+1.fs.writeFileSync("filename","filecontent")
+
+
+2.fs.readFile(filepath,'utf8',(err,filecontent)=>{
+    console.log(filecontent)
+})
+
+
+3.fs.appened(filepath,"enter the content which you want to update",(err)=>{
+   if(!err)  console.log("Updated successfully")
+})
+
+4. fs.unlinkSync(filepath)
+
+Buffer is a tempory memory location
+whenever we create the file or perfrom the any operation on file system. at that time node js requires some memory to perfrom the operations is called as Buffer.
+
