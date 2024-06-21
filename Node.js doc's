@@ -309,9 +309,6 @@ can we load the css,images ? in our html page
 No we can't load the images or css direclty
 
 
-
----------------------------->
-
 how to create the 404 page in the nodejs ?
 
 we need to pass the asterisk symbol (*) in place of path
@@ -323,7 +320,15 @@ we need to use the sendFile method to remove the extension from brower URL.
 
 
 
+------------------------>
 
+template Engine
+
+we use the template engine to create dynamic pages , to use template engine we need to install the npm package.
+
+Ejs ?
+
+EJS or Embedded Javascript Templating is a templating engine used by Node. js. The template engine helps to create an HTML template with minimal code. Also, it can inject data into the HTML template on the client side and produce the final HTML.
 
 
 -------------------------->Doubts
