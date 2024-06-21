@@ -280,3 +280,53 @@ app.get('/about', (req, res) => {
   res.send('<h1>About Us</h1><p>This is the about page.</p>');
 });
 
+
+----------------------------------
+
+Making the html pages in node js
+
+1. created the root page in node js and named as index.html it will consider that page as root page of the html
+
+
+here use is the middle ware of express js
+2. app.use(express.static(htmlpage)) --> follow this step to link the static file in our node js
+
+
+3.  quesiton and answers
+
+
+what is use of path module ?
+
+path module will help us to access the folders of our project.
+
+what is static method ?
+
+static method will load the static pages which are .html files 
+
+
+can we load the css,images ? in our html page
+
+No we can't load the images or css direclty
+
+
+
+---------------------------->
+
+how to create the 404 page in the nodejs ?
+
+we need to pass the asterisk symbol (*) in place of path
+
+How do you remove the extension from browser URL in the node.js ?
+
+we need to use the sendFile method to remove the extension from brower URL.
+
+
+
+
+
+
+
+-------------------------->Doubts
+
+1.can we load the css,images ? in our html page
+2.

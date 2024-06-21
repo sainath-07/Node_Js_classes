@@ -32,9 +32,32 @@ app.get('/object',(res,resp)=>{
 })
 
 
+
+// Navigation to  about page from contact page
+
+app.get('/contact',(req,resp)=>{
+      resp.send(`<h1>contact page</h1>
+                <a href='/about'>click here to go about page.</a> `);
+})
+
+
+
+// geting the data from browser url using the request.kquery 
+
+
+app.get('/input',(req,resp)=>{
+      resp.send(`<input type="text" style="font-size:45px" value=${req.query.name}>
+                 <div>This is a input field page...</div>
+                 <div style="border:2px solid red ;font-size:45px">${req.query.name}</div>`)
+})
+
+// Always place this place not found at bottom otherwise it will not route to particular page,
+
 app.get('*',(req,resp)=>{
       resp.send(`Page is NOT FOUND....`);
 });
+
+
 
 app.listen(5000);
 
