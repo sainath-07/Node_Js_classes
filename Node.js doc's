@@ -218,3 +218,65 @@ crud operations with file system
 Buffer is a tempory memory location
 whenever we create the file or perfrom the any operation on file system. at that time node js requires some memory to perfrom the operations is called as Buffer.
 
+
+Example of asynchronous programming
+
+let a =10
+let b=0
+
+setTimeout(() => {
+    b=10
+    console.log("hello")
+}, 1000);
+console.log(a+b)
+
+
+-------------------------------------
+
+Express js
+
+Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
+
+
+GET method used in express js handle the INCOMING HTTP GET request
+GET request will fetch the data from the server.
+
+The GET method is also used for routing in Express. Routing is the process how an application responds to a client request.
+app.get(path, callback)
+path: A string representing the path of the route.
+callback: A function that will be executed when the route is matched. This function has the parameters req (the request object) and res (the response object).
+
+
+SEND method :
+
+
+In Express.js, the send method is used to send a response to the client. This method is part of the response object (res) and can be used to send various types of data such as strings, JSON objects, buffers, and more. The send method also automatically sets the appropriate Content-Type header based on the type of data being sent.
+
+res.send([body])
+
+body: The response body  can be of various types like String, Buffer, Object, Array, etc.
+
+1. Sending a String Response
+app.get('/', (req, res) => {
+  res.send('Hello, World!');
+});
+
+2.Sending a JSON Object
+app.get('/user', (req, res) => {
+  res.send({ name: 'John', age: 30 });
+});
+
+
+3.Sending a Buffer
+const fs = require('fs');
+
+app.get('/image', (req, res) => {
+  const img = fs.readFileSync('./path/to/image.png');
+  res.send(img);
+});
+
+4.Sending an HTML Response
+app.get('/about', (req, res) => {
+  res.send('<h1>About Us</h1><p>This is the about page.</p>');
+});
+

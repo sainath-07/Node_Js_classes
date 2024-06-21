@@ -38,5 +38,6 @@ let b=0
 
 setTimeout(() => {
     b=10
+    console.log("hello")
 }, 1000);
 console.log(a+b)
