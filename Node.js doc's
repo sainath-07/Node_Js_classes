@@ -322,13 +322,100 @@ we need to use the sendFile method to remove the extension from brower URL.
 
 ------------------------>
 
-template Engine
+template Engine and dynamic pages using the ejs
 
 we use the template engine to create dynamic pages , to use template engine we need to install the npm package.
 
 Ejs ?
 
 EJS or Embedded Javascript Templating is a templating engine used by Node. js. The template engine helps to create an HTML template with minimal code. Also, it can inject data into the HTML template on the client side and produce the final HTML.
+
+In EJS, when you want to include server-side logic, such as a loop, and generate HTML content within it, you should use <% and %> for the logic part and <%= %> for outputting the values.
+
+
+To display server side logic in our html page use below syntax..
+<%= %> -> for loops  = Output Tags
+<% %> -> for output = Logic Tags
+
+
+In ejs comments are different follow below one syntax to comment Text
+
+    <% /* content */%>
+    <% /* This is an EJS comment and will not be visible in the final HTML output */ %>
+
+
+
+Custom views 
+
+// Set the view engine to EJS
+app.set('view engine', 'ejs');
+
+// Set the custom directory where Express will look for views (EJS files)
+app.set('views', path.join(__dirname, 'templates'));
+
+
+Without Setting views Property: If you don't set the views property, Express defaults to looking in a folder named views. If your templates are not in this folder, Express won't find them.
+
+With Custom views Property: By setting app.set('views', path.join(__dirname, 'templates')), you instruct Express to look in the templates folder for the view files, allowing you to use a custom directory structure.
+
+
+Creating the common file that can accessed by all files,
+
+<%- include('path')%>
+
+to access the common file we need to use the include method and use sign as hyphen (-)
+
+if we use the = equal symbol it will consider as we are loading the javascript file.
+here we need to hypen (-)  so that i will load the html file.
+
+------------------------------------------------
+
+Middlewares
+
+what are the middlewares ?
+
+middlewares are the function which are used with routes 
+middlewares will have access to the request object ( req ), the response object ( res ).
+
+why middle wares ?
+
+it allows us to filter the request and response to check the authentications  we will use the middle wares
+
+
+Typesof  middlewares 
+
+1. Application-level middlewares
+2. Router level middlewares
+3. error -handling middlewares
+4. Built-in middleware
+5. Third-party middlewares
+
+
+if we use the middleware on all the routes then it is called as application -level middlewares
+if we use the middleware on few routes then it is called as router -level middlewares
+
+
+use() method :
+
+
+The use() method is a versatile method in Express.js that allows you to specify middleware functions. Middleware functions are functions that are executed before the request reaches the route handler, and they can be used for a variety of purposes, such as authentication, logging, data processing, and more.
+
+
+interview question and answers 
+
+difference between the  Application-level middlewares & Router level middlewares ?
+
+ In app-level middleware  will be applied to globally
+ In route-level middleware can be applied globally or to single route or to multiple routes
+
+can we apply the middleware on single route ?
+
+we can apply the middleware on single route , we have to pass middleware function name as second parameter
+in the get method , which is used to handle the incoming http request
+
+can we make the middleware in the different file
+
+yes , we can make the middleware in the seperate file , to use them we need to import those modules into your file using the require method 
 
 
 -------------------------->Doubts

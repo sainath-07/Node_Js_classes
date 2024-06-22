@@ -1,6 +1,12 @@
 const express = require('express');
 
 // here if we append the paraenthsis  to the express it will convert into executable state.
+
+// This instance of the Express application is used to set up the server, define routes, and handle requests and responses.
+
+
+// Create an instance of an Express application
+
 const app = express();
 
 // Creating the browser routes

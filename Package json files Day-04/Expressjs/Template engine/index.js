@@ -33,9 +33,15 @@ app.get('/profile',(req,resp)=>{
     const user={
         name :"sainath",
         email : "sainath@gmail.com",
-        city : "hyd"
+        city : "hyd",
+        skills : ["java","sql","mango db",'css','javascript']
     }
      resp.render('profile',{user})
+})
+
+app.get('/login',(req,resp)=>{
+    resp.render('login')
+
 })
 
 app.listen(5000)

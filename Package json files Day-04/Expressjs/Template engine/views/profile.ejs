@@ -6,9 +6,19 @@
     <title>Profile page</title>
 </head>
 <body>
+
+    <%- include('CommonHeader/header.ejs') %>
     <h1>Profile page...</h1>
-    <h4>  user name : <%= user.name %> </h4>
-    <h4>  user email : <%= user.email %></h4>
-    <h4>  user city : <%= user.city %></h4>
+    <h4>User name: <%= user.name %></h4>
+    <h4>User email: <%= user.email %></h4>
+    <h4>User city: <%= user.city %></h4>
+
+   
+    
+    <ul>
+        <% user.skills.forEach((item) => { %>
+            <li><%= item %></li>
+        <% }) %>
+    </ul>
 </body>
 </html>
