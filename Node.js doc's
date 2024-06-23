@@ -423,7 +423,22 @@ yes , we can make the middleware in the seperate file , to use them we need to i
 ---------------------------------
 what is mongodb ?
 
+MongoDB is NoSql database
+the data stored in a collection
+collection don't have row and column
+data is stored in the form of object.
+
+collection means object
+
+
+which ever data we are storing from user if it is structured or fixed data then sql is good to use
+if data is not structured or not fixed data then mongodb is good to use.
+
 what is mongodb compass tool ?
+
+MongoDB Compass is a free, open-source graphical user interface (GUI) tool for querying, analyzing, and optimizing MongoDB data. It's built by MongoDB and can be used on macOS, Windows, and Linux
+
+Provides a graphical view of your MongoDB schema without using query language
 
 what are default database we will get while installation the mongodb?
 
@@ -431,7 +446,12 @@ Admin
 Local
 Config
 
-we can local and config but we cann't delete the Admin database even if we try to delete we can't delete it.
+we can delete local and config but we cann't delete the Admin database even if we try to delete we can't delete it.
+
+
+how do you set environment for mongodb?
+
+by using the Mongodb compass we can setup the environment for mongodb.
 
 
 
