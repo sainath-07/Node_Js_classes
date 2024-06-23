@@ -418,6 +418,25 @@ can we make the middleware in the different file
 yes , we can make the middleware in the seperate file , to use them we need to import those modules into your file using the require method 
 
 
+
+
+---------------------------------
+what is mongodb ?
+
+what is mongodb compass tool ?
+
+what are default database we will get while installation the mongodb?
+
+Admin
+Local
+Config
+
+we can local and config but we cann't delete the Admin database even if we try to delete we can't delete it.
+
+
+
+
+
 -------------------------->Doubts
 
 1.can we load the css,images ? in our html page
